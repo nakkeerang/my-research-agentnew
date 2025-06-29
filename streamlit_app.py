@@ -6,7 +6,7 @@ from docx import Document
 import csv
 from fpdf import FPDF
 
-st.set_page_config(page_title="Gemini Research Agent", layout="centered")
+st.set_page_config(page_title="Ranak Research Agent", layout="centered")
 
 # Initialize session state for assistant messages
 if "assistant_messages" not in st.session_state:
@@ -37,7 +37,7 @@ def custom_receive(self, message, sender, request_reply, silent):
 
 user_proxy.receive = custom_receive.__get__(user_proxy)
 
-st.title("Gemini Research Agent")
+st.title("Ranak Research Agent")
 
 # Input for topic or question
 topic = st.text_input("Enter your question or topic:")
