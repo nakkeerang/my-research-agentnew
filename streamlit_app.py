@@ -118,7 +118,7 @@ if st.session_state.assistant_messages:
     pdf.set_font("Arial", size=12)
     for msg in st.session_state.assistant_messages:
         pdf.multi_cell(0, 10, txt=msg)
-    pdf_bytes = pdf.output(dest="S").encode("latin-1")
+    pdf_bytes = pdf.output(dest="S")
     pdf_io = BytesIO(pdf_bytes)
     st.download_button(
         label="Download PDF",
